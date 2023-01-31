@@ -24,7 +24,7 @@
   "Environments": {
     "$#.PrimaryEnvironment": {
       "Artifacts": {
-        "react-build-release": {
+        "gatsby-build-release": {
           "Name": "Gatsby Build/Release",
           "Output": "./public",
           "Type": "GitHub",
