@@ -11,7 +11,6 @@
       "LowCodeUnit": {
         "Package": "fork|github://fathym-it/public-web-gatsby",
         "Version": "latest",
-        "Path": "lcu-github-artifacts-release.yml",
         "Type": "GitHub"
       },
       "Processor": {
