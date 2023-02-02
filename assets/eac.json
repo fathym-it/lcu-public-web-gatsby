@@ -9,8 +9,9 @@
         "PathRegex": "/.*"
       },
       "LowCodeUnit": {
-        "Package": "fork|github://fathym-it/public-web-gatsby",
+        "SourceControlLookup": "fork|github://fathym-it/public-web-gatsby",
         "Version": "latest",
+        "Path": "lcu-github-artifacts-release.yml",
         "Type": "GitHub"
       },
       "Processor": {
@@ -50,6 +51,7 @@
           "MainBranch": "main",
           "Organization": "fathym-it",
           "Repository": "public-web-gatsby",
+          "Name": "github://fathym-it/public-web-gatsby",
           "Type": "GitHub"
         }
       }
