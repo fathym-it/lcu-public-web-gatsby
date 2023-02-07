@@ -2,11 +2,8 @@
   "Package": {
     "Name": "Gatsby - Headless Websites - Forked Recipe",
     "Description": "A customizable starter to quickly deploy a Gatsby app to Fathym.",
-    "Button": "Launch",
-    "Image": "https://www.fathym.com/assets/images/logo.png",
-    "PreviewImage": "https://www.fathym.com/assets/images/logo.png",
-    "SuccessType": "Project"
-  },
-  "EaC": "./assets/eac.json",
-  "Parameters": "./assets/parameters.json"
+    "Image": "https://www.fathym.com/img/gatsby.png",
+    "PreviewImage": "https://pbs.twimg.com/profile_images/1135999619781939201/HZ-pCQcP_400x400.png",
+    "UsesGit": true
+  }
 }
