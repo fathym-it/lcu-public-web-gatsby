@@ -8,7 +8,7 @@
   "Configurations": {
     "Full": {
       "Name": "Gatsby Quickstart",
-      "Description": "Gaatsby Quickstart",
+      "Description": "Gatsby Quickstart",
       "Phases": [
         {
           "Name": "Setup Gatsby",
