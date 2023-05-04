@@ -3,7 +3,19 @@
     "Name": "Gatsby - Headless Websites - Forked Recipe",
     "Description": "A customizable starter to quickly deploy a Gatsby app to Fathym.",
     "Image": "https://www.fathym.com/img/gatsby.png",
-    "PreviewImage": "https://pbs.twimg.com/profile_images/1135999619781939201/HZ-pCQcP_400x400.png",
-    "UsesGit": true
+    "PreviewImage": "https://pbs.twimg.com/profile_images/1135999619781939201/HZ-pCQcP_400x400.png"
+  },
+  "Configurations": {
+    "Full": {
+      "Name": "Gatsby Quickstart",
+      "Description": "Gaatsby Quickstart",
+      "Phases": [
+        {
+          "Name": "Setup Gatsby",
+          "Order": 1,
+          "Asset": "gatsby"
+        }
+      ]
+    }
   }
 }

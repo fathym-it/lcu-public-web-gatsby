@@ -1,0 +1,77 @@
+{
+  "Applications": {
+    "{{$1}}-public-web-gatsby": {
+      "Details": {
+        "Description": "A basic starting point for sites built with Gatsby.",
+        "Name": "Gatsby - Headless Websites - Forked Recipe"
+      },
+      "LookupConfig": {
+        "PathRegex": "/.*"
+      },
+      "Package": {
+        "Details": {
+          "Build": "latest",
+          "Path": "lcu-github-artifacts-release.yml"
+        },
+        "SourceControlLookup": "github://{{ORGANIZATION}}/public-web-gatsby",
+        "Type": "GitHubLowCodeUnit"
+      },
+      "Processor": {
+        "Details": {
+          "BaseHref": "/",
+          "DefaultFile": "index.html"
+        },
+        "Type": "DFSProcessor"
+      }
+    }
+  },
+  "Environments": {
+    "{{EaC.PrimaryEnvironment}}": {
+      "Artifacts": {
+        "gatsby-build-release": {
+          "Type": "GitHubArtifact",
+          "Details": {
+            "Name": "Gatsby Build/Release",
+            "Output": "./public",
+            "BuildCommand": "npm run build",
+            "InstallCommand": "npm ci",
+            "NPMRegistry": "https://registry.npmjs.org/"
+          }
+        }
+      },
+      "DevOpsActions": {
+        "github-artifacts-release-gatsby": {
+          "ArtifactLookups": ["gatsby-build-release"],
+          "Details": {
+            "Name": "GitHub Artifacts - Release - Gatsby",
+            "Path": "lcu-github-artifacts-release.yml",
+            "Templates": [
+              "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/_header.hbs.yml",
+              "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/release-flow.yml"
+            ]
+          }
+        }
+      },
+      "Sources": {
+        "fork|github://fathym-it/public-web-gatsby": {
+          "DevOpsActionTriggerLookups": ["github-artifacts-release-gatsby"],
+          "Details": {
+            "Branches": ["main"],
+            "MainBranch": "main",
+            "Organization": "{{ORGANIZATION}}",
+            "Repository": "public-web-gatsby",
+            "Name": "github://{{ORGANIZATION}}/public-web-gatsby"
+          },
+          "Type": "GitHubSourceControl"
+        }
+      }
+    }
+  },
+  "Projects": {
+    "{{PROJECT_LOOKUP}}": {
+      "ApplicationLookups": [
+        "{{$1}}-public-web-gatsby"
+      ]
+    }
+  }
+}
